@@ -8,6 +8,20 @@ import "./Skills.css";
 import { skills, experience } from "../config/data";
 
 const Skills = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   // const [skills, setSkills] = useState([]);
   // const [experience, setExperience] = useState();
 
@@ -97,22 +111,26 @@ const Skills = () => {
                         duration: 1,
                       }}
                       className="app__skills-exp-work"
-                      data-tip
-                      data-for={work.name}
+                      data-tooltip-id={work.name}
+                      data-tooltip-content={work.desc}
                     >
                       <h4 className="bold-text text-shadow-outline-white">
                         {work.name}
                       </h4>
-                      <p className="text-xl text-gray-900">{work.company}</p>
+                      <p className="text-xl font-extrabold text-gray-900 ">
+                        {work.company}
+                      </p>
                     </motion.div>
-                    <Tooltip
-                      id={work.name}
-                      effect="solid"
-                      arrowColor="#313bac"
-                      className="skills-tooltip"
-                    >
-                      {work.desc}
-                    </Tooltip>
+                    {!isMobile ? (
+                      <Tooltip
+                        id={work.name}
+                        effect="solid"
+                        arrowColor="#313bac"
+                        className="skills-tooltip"
+                      />
+                    ) : (
+                      <p className="mobile-description">{work.desc}</p>
+                    )}
                   </React.Fragment>
                 ))}
               </motion.div>

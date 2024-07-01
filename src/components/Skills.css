@@ -9,7 +9,11 @@
   }
 
   @media screen and (min-width: 2000px) {
-    font-size: 4rem;
+    font-size: 3rem;
+  }
+
+  @media screen and (max-width: 768px) {
+    font-size: 2rem;
   }
 
   @media screen and (max-width: 450px) {
@@ -132,7 +136,7 @@
 }
 
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
   .app__skills-list {
     gap: 50px;
     flex-wrap: nowrap;
@@ -171,7 +175,7 @@
     margin-top: 2rem;
   }
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 768px) {
     font-size: smaller;
     margin-top: 0;
   }
@@ -185,7 +189,7 @@
   align-items: flex-start;
   margin: 1rem 0;
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 768px) {
     margin-top: 0;
     font-size: smaller;
   }
@@ -205,7 +209,7 @@
     h4 {
       font-weight: 500;
 
-      @media screen and (max-width: 600px) {
+      @media screen and (max-width: 768px) {
         font-size: 1rem;
       }
     }
@@ -214,7 +218,7 @@
       font-weight: 400;
       margin-top: 5px;
 
-      @media screen and (max-width: 600px) {
+      @media screen and (max-width: 768px) {
         font-size: 0.875rem; 
       }
     }
@@ -228,7 +232,7 @@
     font-weight: 800;
     color: var(--secondary-color);
 
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 768px) {
       font-size: 1rem;
     }
   }
@@ -241,7 +245,7 @@
 
 .skills-tooltip {
   max-width: 300px !important;
-  background-color: var(--white-color) !important;
+  background-color: white !important;
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.1) !important;
   border-radius: 5px !important;
   padding: 1rem !important;
@@ -254,5 +258,26 @@
     font-size: 1.75rem !important;
     max-width: 500px !important;
     line-height: 2 !important;
+  }
+}
+
+.mobile-description {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .app__skills-exp-work[data-tooltip-id] {
+    pointer-events: none;
+  }
+
+  .skills-tooltip {
+    display: none;
+  }
+
+  .mobile-description {
+    max-width: 280px;
+    text-align: justify;
+    display: flex;
+    font-size: 1rem;
   }
 }

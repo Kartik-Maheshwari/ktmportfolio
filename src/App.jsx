@@ -1,17 +1,37 @@
-import React, { useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import Navbar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
 import { links, about } from "./config/data";
 import Skills from "./components/Skills";
-import Carousel from "./components/MiniProject";
-import { projectdata } from "./config/projectdata";
 import ProjectSection from "./components/ProjectsSection/ProjectSection";
 import "./App.css";
+import MobileWarning from "./components/MobileWarning";
 import Aboutme from "./components/AboutMe/Aboutme";
 
 export default function App() {
   const parallax = useRef(null);
+  const [isMobile, setIsMobile] = useState(false);
+  const [showWarning, setShowWarning] = useState(true);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (isMobile) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  }, [isMobile]);
 
   const gradient = [
     "#4484ce",
@@ -24,12 +44,15 @@ export default function App() {
 
   return (
     <div
-      className="w-full h-[100vh] App"
+      className={`w-full h-[100vh] App ${isMobile ? "no-scroll" : ""}`}
       style={{
         background: `linear-gradient(136deg,${gradient})`,
         backgroundSize: "1200% 1200%",
       }}
     >
+      {isMobile && showWarning && (
+        <MobileWarning onClose={() => setShowWarning(false)} />
+      )}
       <Navbar parallaxRef={parallax} />
       <Parallax ref={parallax} pages={4}>
         <ParallaxLayer

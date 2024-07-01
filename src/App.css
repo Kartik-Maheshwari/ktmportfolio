@@ -6,3 +6,10 @@ body {
   -ms-overflow-style: none; 
   scrollbar-width: none;  
 }
+
+/* App.css */
+@media (max-width: 768px) {
+  .mobile-warning {
+    display: flex;
+  }
+}
