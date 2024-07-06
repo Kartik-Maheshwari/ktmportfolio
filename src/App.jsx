@@ -5,7 +5,7 @@ import HeroSection from "./components/HeroSection";
 import { links, about } from "./config/data";
 import Skills from "./components/Skills";
 import ProjectSection from "./components/ProjectsSection/ProjectSection";
-import "./App.css";
+// import "./App.css";
 import MobileWarning from "./components/MobileWarning";
 import Aboutme from "./components/AboutMe/Aboutme";
 
@@ -16,6 +16,7 @@ export default function App() {
 
   useEffect(() => {
     const handleResize = () => {
+      console.log(window.innerWidth);
       setIsMobile(window.innerWidth <= 768);
     };
     handleResize();
@@ -27,6 +28,7 @@ export default function App() {
 
   useEffect(() => {
     if (isMobile) {
+      console.log("inside if");
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "auto";
@@ -54,7 +56,7 @@ export default function App() {
         <MobileWarning onClose={() => setShowWarning(false)} />
       )}
       <Navbar parallaxRef={parallax} />
-      <Parallax ref={parallax} pages={4}>
+      <Parallax ref={parallax} pages={4} enabled={!isMobile}>
         <ParallaxLayer
           offset={1}
           speed={1}
