@@ -30,8 +30,9 @@ export const prodata = [
           title: "Shopping Cart Application",
           description:
             "Developed a feature-rich shopping cart application using React and Redux. Implemented dynamic product listing, efficient state management, and seamless user interaction. Leveraged React's useEffect hook for dynamic data fetching, Redux for centralized state management, and integrated toast notifications for real- time user feedback.",
+          link: "https://ktm-shoppingcart.netlify.app/",
           image: {
-            url: "https://codehelp-apis.vercel.app/get-top-courses/Development/Web%20Development%20Fundamentals.png",
+            url: "./projects/Shopping.png",
             alt: "Web Development Fundamentals",
           },
         },
@@ -42,8 +43,20 @@ export const prodata = [
           title: "Weather App",
           description:
             "Developed a Weather App that allows users to check the weather for their current location or search for weather information by city name. The app retrieves data from the OpenWeatherMap API and displays key weather parameters such as temperature, wind speed, humidity, and cloudiness.",
+          link: "https://ktm-weatherapp.netlify.app/",
           image: {
-            url: "https://codehelp-apis.vercel.app/get-top-courses/Business/Introduction%20To%20Marketing.png",
+            url: "./projects/weather.png",
+            alt: "Introduction to Marketing",
+          },
+        },
+        {
+          id: "MK102",
+          title: "Notes Making App",
+          description:
+            "Developed a Notes App that allows users to check the weather for their current location or search for weather information by city name. The app retrieves data from the OpenWeatherMap API and displays key weather parameters such as temperature, wind speed, humidity, and cloudiness.",
+          link: "https://notes-app-ktm.netlify.app/",
+          image: {
+            url: "./projects/notes.png",
             alt: "Introduction to Marketing",
           },
         },
@@ -65,8 +78,9 @@ export const prodata = [
           id: "LC101",
           title: "Razor PayClone",
           description: "Made a Razorpay Clone Using HTML and Tailwind css",
+          link: "https://ktm-razorpay.netlify.app/",
           image: {
-            url: "https://codehelp-apis.vercel.app/get-top-courses/Lifestyle/Cooking%20Basics.png",
+            url: "./projects/Razorpay.png",
             alt: "Cooking Basics",
           },
         },

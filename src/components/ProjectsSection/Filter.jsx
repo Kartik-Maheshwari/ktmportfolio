@@ -10,11 +10,11 @@ const Filter = (props) => {
   }
 
   return (
-    <div className="w-11/12 flex flex-wrap max-w-max space-x-4 gap-y-4 mx-auto justify-center py-4">
+    <div className="w-full flex flex-wrap justify-center gap-4 mx-auto pt-3 pb-4">
       {filterData.map((data) => {
         return (
           <button
-            className={`text-lg px-2 py-1 rounded-md font-medium text-white bg-black hover:bg-opacity-50 border-2 transition-all duration-300
+            className={`text-base sm:text-lg px-2 py-1 rounded-md font-medium text-white bg-black hover:bg-opacity-50 border-2 transition-all duration-300
           ${
             category === data.title
               ? "bg-opacity-60 border-white"

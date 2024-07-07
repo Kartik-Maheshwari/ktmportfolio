@@ -22,16 +22,9 @@ const Cards = (props) => {
   }
 
   return (
-    <div className="flex flex-wrap justify-center gap-9 mt-auto ">
+    <div className="flex flex-wrap justify-center gap-9 mt-auto pt-2 h-[70vh]">
       {getCourses().map((course) => {
-        return (
-          <Card
-            course={course}
-            key={course.id}
-            // likedCourses={likedCourses}
-            // setLikedCourses={setLikedCourses}
-          />
-        );
+        return <Card course={course} key={course.id} />;
       })}
     </div>
   );

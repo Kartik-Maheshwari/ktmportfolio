@@ -1,6 +1,5 @@
 import React from "react";
-import { FcLike, FcLikePlaceholder } from "react-icons/fc";
-// import { toast } from 'react-toastify';
+import { BiShow } from "react-icons/bi";
 import { motion } from "framer-motion";
 
 const Card = (props) => {
@@ -9,44 +8,31 @@ const Card = (props) => {
   let setLikedCourses = props.setLikedCourses;
 
   function clickHandler() {
-    // if (likedCourses.includes(course.id)) {
-    //   //pehele se like hua pada hai
-    //   //to ham filter out kardenge prev state me se unn id jo jiss id ke equal current id na ho.
-    //   setLikedCourses((prev) => prev.filter((cid) => cid !== course.id));
-    //   // toast.warning("Like Removed");
-    // } else {
-    //   //pehele se liked nahi hai ye course
-    //   //insert karna hai ye course liked course me
-    //   if (likedCourses.length === 0) {
-    //     setLikedCourses([course.id]);
-    //   } else {
-    //     setLikedCourses((prev) => [...prev, course.id]);
-    //   }
-    //   // toast.success("Like Successfully");
-    // }
-    console.log("button is clicked");
+    window.open(course.link, "_blank");
   }
+
   return (
     <motion.div
-      className="w-[300px] bg-blue-950 bg-opacity-80 rounded-ms overflow-hidden rounded-md"
+      className="w-[300px] h-[320px] bg-[#4484ce] bg-opacity-80 rounded-ms overflow-hidden rounded-md"
       whileInView={{
         opacity: [0, 1],
-        scale: [0.5, 1], // start from scale 0.5 and go to 1
+        scale: [0.5, 1],
         transition: {
-          duration: 1, // adjust duration as needed
+          duration: 1,
         },
       }}
     >
       <div className="relative">
-        <img src={course.image.url}></img>
-        <div className="w-[40px] h-[40px] bg-white rounded-full absolute right-2 -bottom-3 grid place-items-center">
-          <button onClick={clickHandler}>
-            {/* {likedCourses.includes(course.id) ? (
-              <FcLike fontSize="1.75rem" />
-            ) : (
-              <FcLikePlaceholder fontSize="1.75rem" />
-            )} */}
-            <FcLike fontSize="1.75rem" />
+        <img src={course.image.url} alt={course.title}></img>
+        <div className="flex justify-center items-center w-[40px] h-[40px] bg-white rounded-full absolute right-2 -bottom-3">
+          <button
+            onClick={clickHandler}
+            className=" transition duration-300 ease-in-out transform hover:scale-110 hover:bg-blue-500 p-2 rounded-full"
+          >
+            <BiShow
+              fontSize="1.75rem"
+              className="text-gray-500 hover:text-white"
+            />
           </button>
         </div>
       </div>
