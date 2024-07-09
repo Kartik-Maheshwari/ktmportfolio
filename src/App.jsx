@@ -149,7 +149,7 @@ export default function App() {
           />
         </ParallaxLayer>
 
-        <ParallaxLayer offset={2.6} speed={0.4} style={{ opacity: 0.6 }}>
+        <ParallaxLayer offset={2.6} speed={0.4} style={{ opacity: 0 }}>
           <img
             src="./images/react.webp"
             style={{ display: "block", width: "20%", marginLeft: "5%" }}

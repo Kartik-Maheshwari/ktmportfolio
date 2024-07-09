@@ -54,7 +54,7 @@ const experience = [
       {
         name: "SDE Intern",
         company: "Ecom Express Pvt. Ltd.",
-        desc: "Learned sometging",
+        desc: "Starting a new Postition",
       },
     ],
   },
@@ -83,6 +83,6 @@ const about = {
   message:
     "I am Kartik Maheshwari, a passionate Computer Science student at ABES Engineering College, set to graduate in 2025 with a strong academic record. My technical skills encompass programming languages like C++, C, Python, and SQL, and I'm proficient in web development with HTML, CSS, JavaScript, MongoDB, ReactJS, and NodeJS. I have hands-on experience from internships, including developing responsive web designs and Salesforce administration. I am ready to create practical solutions using modern technologies and have ability to work in team environments, and strong attention to detail. I am looking for an IT-related internship with a forward-moving company.",
   resume:
-    "https://drive.google.com/file/d/1oczWBYU3q6xtEf2yqPEG_1Tg3QzHgsrr/view?usp=sharing",
+    "https://drive.google.com/file/d/1RbZxHH2x8-n-Twy1ktpAhFWljl7mEujb/view?usp=sharing",
 };
 export { links, skills, experience, about };

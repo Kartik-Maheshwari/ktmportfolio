@@ -11,10 +11,10 @@ export const filterData = [
     id: "3",
     title: "JavaScript",
   },
-  {
-    id: "4",
-    title: "Python",
-  },
+  // {
+  //   id: "4",
+  //   title: "Python",
+  // },
   {
     id: "5",
     title: "HTML/CSS",
@@ -60,19 +60,30 @@ export const prodata = [
             alt: "Introduction to Marketing",
           },
         },
-      ],
-      Python: [
         {
-          id: "GD101",
-          title: "Text Summarizer",
+          id: "MK103",
+          title: "JS Quiz Game",
           description:
-            "Built a Web Application based solution that generates a Text summary of content available using the Hugging face Library of Python",
+            "Developed a Notes App that allows users to check the weather for their current location or search for weather information by city name. The app retrieves data from the OpenWeatherMap API and displays key weather parameters such as temperature, wind speed, humidity, and cloudiness.",
+          link: "https://quiz-game-ktm.netlify.app/",
           image: {
-            url: "https://codehelp-apis.vercel.app/get-top-courses/Design/Graphic%20Design%20Fundamentals.png",
-            alt: "Graphic Design Fundamentals",
+            url: "./projects/quiz.png",
+            alt: "Introduction to Marketing",
           },
         },
       ],
+      // Python: [
+      //   {
+      //     id: "GD101",
+      //     title: "Text Summarizer",
+      //     description:
+      //       "Built a Web Application based solution that generates a Text summary of content available using the Hugging face Library of Python",
+      //     image: {
+      //       url: "https://codehelp-apis.vercel.app/get-top-courses/Design/Graphic%20Design%20Fundamentals.png",
+      //       alt: "Graphic Design Fundamentals",
+      //     },
+      //   },
+      // ],
       "HTML/CSS": [
         {
           id: "LC101",
