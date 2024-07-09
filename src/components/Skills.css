@@ -210,6 +210,7 @@
       font-weight: 500;
 
       @media screen and (max-width: 768px) {
+        max-width: 70vw;
         font-size: 1rem;
       }
     }
